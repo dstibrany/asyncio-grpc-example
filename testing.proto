@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package testgrpc;
+
+service Tester {
+  rpc Predict (PredictRequest) returns (PredictReply) {}
+}
+
+// The request message containing the user's name.
+message PredictRequest {
+  string id = 1;
+}
+
+// The response message containing the greetings
+message PredictReply {
+  string result = 1;
+}
